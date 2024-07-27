@@ -1,0 +1,9 @@
+{ 
+Filter = { 
+Bundles = ( "com.apple.springboard", "com.apple.UIKit", "com.apple.uikit", "com.apple.mobilephone", "com.apple.TelephonyUI", "com.apple.mobiletimer", "com.apple.mobileipod", "com.apple.Preferences", "com.apple.mobileslideshow" ); 
+Executables = ("HomeWallpaper", "HomeWallpaper.dylib", "Folders.dylib", "Folders");
+Classes = ("SetWallpaperSheet", "SBFolder");
+Mode = "Any";
+};
+
+ }

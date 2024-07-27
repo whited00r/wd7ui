@@ -1,0 +1,36 @@
+#!/bin/bash
+
+chown mobile:mobile -R /var/mobile/Whited00r/resources
+
+chmod -R 775 /var/mobile/Whited00r/resources
+
+chmod -R 775 /var/mobile/Library/WD7UI
+chown -R mobile:mobile /var/mobile/Library/WD7UI
+
+cd /var/mobile/Library
+for i in *.png *.jpg; do chmod 775 "$i"; chown mobile:mobile "$i"; done
+cd /
+if [[ -f "/System/Library/CoreServices/SpringBoard.app/Folders/FolderSwitcherBG.png" ]];
+	then rm /System/Library/CoreServices/SpringBoard.app/Folders/FolderSwitcherBG.png
+fi
+if [[ -f "/System/Library/CoreServices/SpringBoard.app/Folders/FolderShadowBtm.png" ]];
+	then mv /System/Library/CoreServices/SpringBoard.app/Folders/FolderShadowBtm.png /System/Library/CoreServices/SpringBoard.app/Folders/FolderShadowBtm.back
+fi
+if [[ -f "/System/Library/CoreServices/SpringBoard.app/Folders/FolderShadowTop.png" ]];
+	then mv /System/Library/CoreServices/SpringBoard.app/Folders/FolderShadowTop.png /System/Library/CoreServices/SpringBoard.app/Folders/FolderShadowTop.back
+fi
+if [[ -f "/System/Library/CoreServices/SpringBoard.app/AppSwitcher/AppSwitcherBG.png" ]];
+	then rm /System/Library/CoreServices/SpringBoard.app/AppSwitcher/AppSwitcherBG.png
+fi
+
+if [[ ! -f "/System/Library/CoreServices/SpringBoard.app/SBDockBG_backup.png" ]];
+	then mv "/System/Library/CoreServices/SpringBoard.app/SBDockBG.png" "/System/Library/CoreServices/SpringBoard.app/SBDockBG_backup.png";
+fi
+
+if [[ ! -f /var/mobile/Library/AppSwitcherBG_light.png ]];
+	then cp /var/mobile/Library/AppSwitcherBG.png /var/mobile/Library/AppSwitcherBG_light.png; #Avoiding a bug here... won't look as good out the box but meh.
+fi
+
+ln -s "/var/mobile/Library/AppSwitcherBG_light.png" "/System/Library/CoreServices/SpringBoard.app/SBDockBG.png"
+ln -s /var/mobile/Library/AppSwitcherBG.png /System/Library/CoreServices/SpringBoard.app/AppSwitcher/AppSwitcherBG.png
+ln -s /var/mobile/Library/HomeWallpaperBlurred.png /System/Library/CoreServices/SpringBoard.app/Folders/FolderSwitcherBG.png

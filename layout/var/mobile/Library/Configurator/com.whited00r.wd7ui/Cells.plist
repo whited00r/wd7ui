@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.whited00r.wd7ui</string>
+			<key>key</key>
+			<string>fadeScatter</string>
+			<key>textColor</key>
+			<string>blueColor</string>
+			<key>label</key>
+			<string>FADEICONS_LABEL</string>
+			<key>popupText</key>
+			<string>FADEICONS_POPUP</string>
+			<key>category</key>
+			<string>Visual</string>
+			<key>section</key>
+			<string>IconOptions</string>
+			<key>requiredCapabilities</key>
+			<array>
+				<string>advancedConfig</string>
+			</array>
+			<key>localize</key>
+			<true/>
+		</dict>
+		</array>
+	<key>title</key>
+	<string>WD7UI Extras</string>
+</dict>
+</plist>

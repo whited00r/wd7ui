@@ -1,0 +1,9 @@
+Package: com.whited00r.wd7ui
+Name: WD7UI
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: A UI to go along with everything else
+Maintainer: Whited00r
+Author: Whited00r
+Section: Tweaks
